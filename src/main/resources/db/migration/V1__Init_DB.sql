@@ -9,3 +9,17 @@ create table if not exists post
     date_creation timestamp not null,
     primary key (id)
 );
+
+create table user_role (
+    user_id int8 not null,
+    roles text
+);
+
+create table usr (
+    id int8 not null,
+    active boolean not null,
+    username text not null,
+    password text not null,
+    real_name text not null,
+    primary key (id)
+);

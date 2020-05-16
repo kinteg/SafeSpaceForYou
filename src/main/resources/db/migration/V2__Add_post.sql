@@ -33,3 +33,11 @@ values (1, 'Анфиса Дюкова', 'Вам счёт вместе или р�
 Анфиса',
         '15.05.2020')
 ON CONFLICT DO NOTHING;
+
+insert into usr (id, username, password, active, real_name)
+values (1, 'admin', '123', true, 'Анфиса')
+ON CONFLICT DO NOTHING;
+
+insert into user_role (user_id, roles)
+values (1, 'ADMIN')
+ON CONFLICT DO NOTHING;

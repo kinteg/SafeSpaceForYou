@@ -1,4 +1,4 @@
-package com.fisadyukovasecondattempt.SafeSpaceForYou;
+package com.fisadyukovasecondattempt.SafeSpaceForYou.controller;
 
 import com.fisadyukovasecondattempt.SafeSpaceForYou.domain.Post;
 import com.fisadyukovasecondattempt.SafeSpaceForYou.repo.PostRepo;
