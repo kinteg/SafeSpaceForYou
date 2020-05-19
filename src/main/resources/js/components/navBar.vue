@@ -5,7 +5,7 @@
             <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav>
                     <b-nav-item style="color: white;!important;" href="/">Главная</b-nav-item>
-                    <b-nav-item style="color: white;!important;" href="/">Блог</b-nav-item>
+                    <b-nav-item style="color: white;!important;" href="/blog">Блог</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
@@ -21,5 +21,6 @@
 <style scoped>
 .navBar{
     background-color:#f3a8bf;
+    font: normal normal 110% Serif;
 }
 </style>

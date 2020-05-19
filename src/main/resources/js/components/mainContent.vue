@@ -35,9 +35,10 @@
     .description{
         margin-top: 15px;
         background-color: rgba(255, 255, 255, 0.6);
-        border-radius: 5px;
+        border-radius: 15px;
         font: normal normal 110% Serif;
         color: #422d61;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
 
     .mainText{
