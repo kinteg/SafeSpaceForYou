@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import Post from "../components/Post.vue";
+    import Post from "../components/post.vue";
     export default {
         name: "ReadPost",
         components: {Post}
