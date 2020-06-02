@@ -17,7 +17,7 @@
             <b-form-group>
                 <b-form-textarea
                         v-model="post.textInArea"
-                        @keydown.enter="enter"
+                        @update = "enter"
                         id="text"
                         placeholder="Введите текст поста"
                         rows="3"
@@ -39,9 +39,10 @@
         data(){
             return{
                 post:{
+                    position: 0,
                     header:"",
                     textInArea:"",
-                    text:"<p>",
+                    text:"",
                     author:"",
                 }
             }
@@ -49,7 +50,13 @@
 
         methods:{
             enter(){
-                this.post.text += "</p><p>";
+                let p = function(s) { return '<p>' + s + '</p>'; };
+
+                this.post.text = this.post.textInArea
+                    .split('\n\n')
+                    .map(function(item) { return p(item); })
+                    .join('')
+                    .replace(/\n/g, '</p><p>');
                 console.log(this.post.text);
             },
 
@@ -67,10 +74,13 @@
 
 <style scoped>
     .block{
-        padding: 25px;
-        background-color: white;
-        border-radius: 15px;
         margin-top: 15px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255,1);
+        border-radius: 15px;
+        font: normal normal 110% Serif;
+        color: #422d61;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
 
     .button{
