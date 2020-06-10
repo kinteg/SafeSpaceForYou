@@ -66,7 +66,7 @@ public class JwtTokenProvider {
     public String resolveToken(HttpServletRequest req) {
         String bearerToken = req.getHeader("Authorization");
         if (bearerToken != null && bearerToken.startsWith("Bearer_")) {
-            return bearerToken.substring(7, bearerToken.length());
+            return bearerToken.substring(7);
         }
         return null;
     }
@@ -84,9 +84,7 @@ public class JwtTokenProvider {
     private List<String> getRoleNames(List<RoleEntity> userRoleEntities) {
         List<String> result = new ArrayList<>();
 
-        userRoleEntities.forEach(role -> {
-            result.add(role.getName());
-        });
+        userRoleEntities.forEach(role -> result.add(role.getName()));
 
         return result;
     }

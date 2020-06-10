@@ -9,7 +9,7 @@ module.exports = merge(common, {
         compress: true,
         port: 8000,
         allowedHosts: [
-            'localhost:8082'
+            'localhost:8086'
         ],
         stats: 'errors-only',
         clientLogLevel: 'error',
