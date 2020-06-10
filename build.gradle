@@ -27,6 +27,8 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	compile group: 'org.hibernate.validator', name: 'hibernate-validator', version: System.properties['org.hibernate.validator.version']
+	compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
 	runtime group: 'org.flywaydb', name: 'flyway-gradle-plugin', version: '6.2.4'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
